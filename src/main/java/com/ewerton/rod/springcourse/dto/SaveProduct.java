@@ -14,9 +14,9 @@ import java.math.BigDecimal;
 @Getter
 public class SaveProduct implements Serializable {
 
-    @NotBlank
+    @NotBlank(message = "The name can't be empty")
     private String name;
-    @DecimalMin(value = "0.01")
+    @DecimalMin(value = "0.01", message = "The price must be greater than 0")
     private BigDecimal price;
     @Min(value = 1)
     private Long categoryId;

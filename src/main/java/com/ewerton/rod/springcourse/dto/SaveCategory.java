@@ -12,6 +12,6 @@ import java.math.BigDecimal;
 @Getter
 public class SaveCategory implements Serializable {
 
-    @NotBlank
+    @NotBlank(message = "The name can't be empty")
     private String name;
 }
